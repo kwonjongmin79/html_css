@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Layout</title>
+    <style>
+        .flex-box {
+            display: flex;            
+        }
+        .content-box {
+            width: 700px;
+            height: 500px;
+            border: 1px solid rgb(247, 5, 5);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .my-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .img-box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgb(50, 5, 247);           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .right-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="content-box">
+            <div class="user-info">
+                <img src="/html_css/img/memi.jpg" class="my-img" alt="Profile Image">
+                <div>
+                    <h2>까투리</h2>
+                    <p>1시간 전</p>
+                </div>
+            </div>
+            <h2>메밀꽃 필 무렵</h2>
+            <p>이효석의 문학 세계가 응축된 작품이다. 허생원과 나귀와의 융합을 통해 허생원과 동이의 혈연적 관계를 암시하는 치밀한 구성을 보이는 이 작품은, 독특한 문체로도 1930년대 단편의 정점으로 인정된다. 또한 달빛 아래 메밀꽃이 하얗게 핀 밤길을 배경으로, 얽은 얼굴 때문에 여자와는 인연이 없던 허생원의 애틋한 사랑을 형상화 시킨 작가의 솜씨가 돋보이는 작품이기도 하다.
+                [네이버 지식백과] 메밀꽃 필 무렵 (한국민족문화대백과, 한국학중앙연구원)</p>
+        </div>   
+
+        <div class="img-box">
+            <img src="/html_css/img/memi.jpg" class="right-img";>
+        </div>
+        
+    </div>
+    >
+</body>
+</html>
