@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .flex-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .box {
+      flex: 1 1 22%; /* 기본적으로 데스크탑에서 4개가 가로로 보이도록 */
+      min-width: 200px;
+      border: 1px solid #ccc;
+      padding: 16px;
+      text-align: center;
+    }
+
+    /* 태블릿 : 2개씩 가로로 배치 */
+    @media (max-width: 800px) {
+      .box {
+        flex: 1 1 45%;
+      }
+    }
+
+    /* 모바일 : 1개씩 배치 */
+    @media (max-width: 575px) {
+      .box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flex-box">
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

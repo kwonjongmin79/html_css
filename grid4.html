@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            background: rgb(13, 13, 13);
+            color:aliceblue;
+            min-height: 100vh;  /* 화면 전체 높이 */
+            padding: 50px;
+        }
+        .grid-box{
+            display: grid; /* grid 사용 */
+            
+            gap: 10px;
+            grid-template-columns: repeat(4,1fr); /* 가로로 배치 */
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* 가로로 배치 */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            /* 최소 350px 최대 1fr 유지하는 속성 / (반응형) */
+
+            border: 1px solid rgb(255, 0, 0);
+       
+        }    
+        .box{
+           border: 1px solid rgb(89, 89, 89);
+           border-radius: 8px;
+           padding: 1em;
+           background: rgb(50, 55, 60);
+           align-content: center;
+           text-align: center; /* 세로 정렬 (flex) */
+        }      
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-box">
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

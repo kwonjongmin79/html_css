@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            border: 8px solid rgb(0, 0, 0);
+            
+
+            display: flex;
+            justify-content: center; /* 주축 정렬 (가로 중앙) */
+            align-items: flex-start; /* 교차축 정렬 (세로 중앙) */
+
+            gap: 20px; /* flexbox 사이 내부 간격 */
+
+            /* 
+            1. 전체 사이즈가 줄어들게 되면 flex-wrap: nowrap => 흘러내리지 않고 아이템이 줄어듦
+            2. flex-wrap: wrap => 들어갈 자리가 더이상 없을때 흘러내림 (flex-direction: row)
+            */
+            flex-wrap: nowrap; 
+            flex-wrap: wrap;    /* 아이템이 줄어들지 않고 흘러내림 */
+        }
+        .box {
+         height: 150px;
+         width: 150px;
+         
+         background: rgb(157, 157, 248);
+         font-size: 2.5rem;
+        }
+        
+        @media(max-width: 575px) {
+            .container {
+                flex-wrap:wrap; /* 아이템이 줄어들지 않고 흘러내림 */
+            }
+            .box{
+                width: 100vw; /* 모바일에서 박스 크기 조정 */
+            }
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    </body>
+</html>

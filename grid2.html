@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        height: 100vh;  /* 화면 전체 높이 */
+        border: 8px solid rgb(0, 0, 0);
+
+        display: grid; /* grid 사용 */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 가로로 배치 */
+        /*grid-template-rows: 1fr 1fr 1fr; /* 3개씩 세로로 배치 */
+        grid-auto-rows: 1fr; /* 세로 크기 자동 조정 */     
+        gap: 20px; /* grid 사이 내부 간격 */
+        
+    }
+    .box{
+       /* width: 150px; /* 최소 가로 크기 */
+       /* height: 150px; /* 최소 세로 크기 */
+       /*justify-self: center; /* 가로 정렬 (grid) */
+       /*align-self: center; /* 세로 정렬 (grid) */
+       background: rgb(157, 157, 248);
+       font-size: 2.5rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- grid : 격자(바둑판 모양양) -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+
+    </div>
+
+</body>
+</html>

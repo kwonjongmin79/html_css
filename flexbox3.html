@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin:0;
+    }
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .flex-box {
+      display: flex;
+      justify-content: center;
+      gap:20px;
+
+    }
+    .box{
+        width: min(350px, 100%);
+        min-width: 350px;
+        min-height:350px;
+        text-align: center;
+        background: rgb(99, 99, 247);
+    }   
+    @media (max-width: 800px) {
+        .container {
+            width: 100vw;
+    
+        }
+        .flex-box{
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+      .box {
+          width:min(350px, calc(50vw - 20px));
+          min-width: 0;
+          
+
+      }
+    }
+    @media (max-width: 575px) {
+      .box {
+          width: 98vw;
+          min-height: 0;
+       
+      }
+    }
+ </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flex-box">
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+      <div class="box">
+        <h2>제목</h2>
+        <p>내용</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
