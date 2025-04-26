@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animatio</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            margin: 50px auto; /* 위아래 50px, 양옆 할 수 있는 만큼 여백 */
+            background: #58f8a0;
+            transition: 2s; /*  */
+            transition-duration: 2s; /* 걸리는 시간 */
+            transition-property: background-color; /* transition 적용 대상 스타일 적용용 */
+            transition: 2s all; /* 모든 속성에 적용 */
+            transition-timing-function: ease; /* 중간 변화 속도 */   
+            transition-timing-function: linear; /* 일정한 변화 속도 */
+            transition-timing-function: ease-in-out; /* 처음과 끝이 느리게 변화 */
+            transition-timing-function: cubic-bezier(0.5,0.2,0.8,0.9 ); /* 50% 시간동안, 20% 변화진행해 / 80%시간동안 90%변화 해*/
+            transition-delay: 1s; /* 1초 후에 시작 */
+            transition: 1s border-radius, 3s background-color; /* border-radius 속성에만 적용 */
+            /* 모서리는 1초동안 바뀌고, 배경색은 3초동안 변경해*/
+        
+        }
+
+        .box:hover{
+            background: #f8a058;
+            border-radius: 1000px; /* 둥글게 */
+        }
+      
+
+    </style>
+</head>
+<body>
+    <!-- 움직임 효과 . transition or animation 효과로 가능함 -->
+    <!-- transiton : 걸리는 시간을 늘린다 (EX hover) -->
+    <div class="box"></div>
+
+</body>
+</html>

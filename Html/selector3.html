@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;  /* 나를 감싸고 있는 태그를 따라 색상 변경경*/
+            display: inline-block; /* inline는 버그가 있어 마진, 패딩 적용 안됨 하여 인라인 블럭사용 */
+            margin-top: 30px;     /* inline은 버그가 있어 제대로 적용 안됨*/
+            padding: 0.5em 1.25em; /* inline 적용 안됨*/
+            background-color: #f5f858; /* 파란색 배경 */
+            border-radius: 100px; /* 둥글게 */
+        }
+        a:hover{
+            /* 마우스를 올려놓을때 적용 */
+            color: #f7bebe; /* 흰색 글자 */
+        }
+        a:active{
+            /* 클릭했을때 적용 */
+            background-color: #f7bebe; /* 흰색 배경 */
+            color: #f5f858; /* 파란색 글자 */
+        }
+        a:visited{
+            /* 방문했을때 적용 */
+            color: #6e6e6e; /* 흰색 글자 */
+        }
+        input{
+            padding: 0.5em 1.25em; /* 패딩 */
+            
+        }
+        input:focus{
+            /* 포커스는 입력이 가능한 상태일때 적용 */
+            outline: none; /* 기본 테두리 제거 */
+            border: 2px solid #f5f858; /* 파란색 테두리 */
+            border-radius: 1000px; /* 둥글게 */
+        }
+
+    </style>
+
+</head>
+<body>
+    <a href="https://google.com/" target="_blank" class="btn">구글로 이동</a>
+    <hr/>
+    <input>
+
+</body>
+</html>

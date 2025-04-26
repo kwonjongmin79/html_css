@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positon</title>
+    <style>
+        .container
+        {
+            min-height: 2000px;
+            background-color: yellowgreen;
+        }
+        .box
+        {
+            width:150px;
+            height: 150px;
+            background-color: aquamarine;
+        }
+        .box-positon 
+        /* positon : left, right, top, bottom z-index를 사용할수 있게 된다.*/
+        {
+            /*position: static;    /*  기본값 */
+            /*position: relative; /* 나를 기준으로 */
+            /*position: absolute; /* relative 기준으로 위치 지정 */
+            /*position: fixed;    /* 브라우저를 기준으로 위치 지정 */
+            /*position: sticky;   /* 스크롤을 기준으로 위치 지정 */
+
+            position: relative; /* 나를 기준으로 위치 지정 */
+            /*right: 80px; /* 원래 오른쪽모서리를 기준으로 100px 이동 */
+                left: 100px; /* 원래 왼쪽모서리를 기준으로 500px 이동 */
+                top: 100px; /* 원래 위쪽모서리를 기준으로 500px 이동 */
+        }
+        .position-scroll
+        {
+            position: fixed; /* 항상 고정위치에 있으며 스크롤을 움직여도 고정되어 있음음 */
+            right: 0;
+            top: 0;         
+            /*position: sticky; /* 내부 요소에 있다가 벗어나면 스크롤을 기준으로 위치 지정 */
+            /*left: 300px;
+              top: 300px; /* 스크롤을 기준으로 위치 지정 */
+
+        }
+        .top
+        {
+            
+            height: 300px;
+            background-color: rgb(208, 255, 0);
+        }
+        .bottom
+        {
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+        }
+        .partent
+        {
+            width: 150px;
+            height: 150px;
+            position: relative; /* 자식요소를 기준으로 위치 지정 */
+            background-color: rgb(255, 255, 255);
+            left: 50px;
+            top: 50px;
+            z-index: 12;
+        } 
+        .child
+        {
+            width: 50px;
+            height: 50px;
+            position: absolute; /* relative를 기준으로 위치 지정 */
+            background-color: rgb(0, 0, 0);
+            right: 0; /* relative를 기준으로 왼쪽으로 이동 */
+            top: 20px; /* relative를 기준으로 위쪽으로 이동 */
+            z-index: 10; /* z-index를 사용하여 겹치는 순서를 지정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- position : static, fixed, sticky, relative, absolute -->
+         <!-- left, top, right, bottom, z-index를 사용하기 위해서 position 사용함   -->
+        <!-- fixed: 화면 고정 (html 화면 기준)-->
+         <!-- sticky : position이 없는 것처럼 동작하다가 스크롤이 벗어나면 fixed 처럼 동작 -->
+        <!-- static : 기본값 -->
+         <!-- relative : 내 모서를 기준으로 이동 -->
+          <!-- absolute : 감싸고 있는 relative의 모서리를 기준으로 이동 -->
+         <div class="box box-positon"></div>     
+        <div class="top"></div>
+        <div class="box position-scroll">1</div>
+        <div class="bottom"></div>
+
+    
+        <div class="partent">
+            <div class="child">
+
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터4</title>
+    <style>
+        /* 같은 태그, 클래스 반본되면 순번을 통해 선택*/
+        .container ul li:first-child{
+            color: red; /* 첫번째 자식 */
+        }
+        .container ul li:last-child{
+            color: blue; /* 마지막 자식 */
+        }
+        .container ul li:nth-child(3){
+            color: green; /* 세번째 자식 */
+        }
+        .container ul li:nth-child(odd){
+            background-color: orange; /* 홀수번째 자식 */
+        }
+        .container ul li:nth-child(even){
+            background-color: yellow; /* 짝수번째 자식 */
+        }
+        .container ul li:nth-child(4n){
+            font-weight: 900; /* 4의 배수 지정 */
+        }
+        input[type="checkbox"]:checked + span{
+            color: rgb(192, 187, 187); /* 체크박스가 체크되면 스팬에 글자색 변경 단, + , ~ 로만 가능 */
+            text-decoration: line-through; /* 줄긋기 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>첫번째</li>
+            <li>두번째</li>
+            <li>세번째</li>
+            <li>네번째</li>
+            <li>다섯번째</li>
+            <li>여섯번째</li>
+            <li>일곱번째</li>
+            <li>여덟번째</li>
+            <li>아홉번째</li>
+        </ul>
+        <br/>
+        <input type="checkbox">
+        <span>할 일</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <style>
+        :root 
+        {
+            /* 자주쓸 색상을 저장 */
+            /* 변수 저장 : 일일히 색상을 지정을하면 바꿀때 다 돌아다니면서 바꿔줘야함 
+            ==> 하나의 키워드로 돌려쓰게 만들면 색상을 바꿀대 한개만 바꿔주면 모두 적용됨됨 */
+            --color1: black;
+            --text-color: #f0f0f0; /* 메인 색상 */
+            --accent-color: #006aff; /* 서브 색상 */
+            /* var (--text-color) */
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none; /* 밑줄 제거 */
+            color: inherit; /* 상속받은 색상으로 사용 */
+        }
+        nav
+        {
+            height: 60px; /* 높이 */
+            background-color: var(--color1); /* 배경색상 */
+            display: flex; /* flex 사용 */
+            justify-content: center; /* 가운데 정렬 */
+            align-items: center; /* 세로 정렬 */
+        }
+        .links-container
+        {
+            height: 100%; /* 높이 */
+            width: 100%; /* 너비 */
+            display: flex; /* flex 사용 */
+            align-items: center; /* 세로 정렬 */
+            flex-direction: row;
+        }   
+        .home-link{
+            margin-right: auto;
+        }      
+        nav a
+        {
+            color: var(--text-color); /* 글자색상 */
+            padding: 0 20px; /* 여백 */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+        }
+        svg{
+            fill: var(--text-color); /* 아이콘 색상 */
+        }
+        nav a:hover
+        {
+            background-color: var(--accent-color); /* 배경색상 */
+          
+        }
+        #sidebar-active
+        {
+            display: none; /* 숨김 */
+        }
+        .open-sidebar-btn .close-sidebar-btn {
+            display: none; /* 숨김 */
+            padding: 20px;
+        }
+       @media(max-width: 575px)
+       {
+        nav{
+            justify-content: flex-end;
+        }
+        .open-sidebar-btn .close-sidebar-btn
+       {
+            display: block;
+              }
+              .links-container{
+                flex-direction: column;
+                background-color: var(--color1);       
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                z-index: 10;
+                
+                width: 300px;
+                transition: 0.75s; ease-in-out; /* 애니메이션 효과 */
+
+            }
+            nav a{
+                height:auto;
+                width:100px;
+                padding: 20px 30px; /* 여백 */
+                justify-content: flex-start;
+            }
+            #sidebar-active:checked ~ .links-container{
+                right: 0; /* 오른쪽으로 이동 */
+                
+            }
+            #overlay{
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: fixed;
+                z-index: 9;
+                background-color: rgb(0,0,0, 0.2); /* 반투명 배경 */
+                transition: 1s;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 구글 폰트 in -->
+<nav>
+    <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" 
+            width="32px" fill="#1f1f1f">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+        </label>
+        <label for="sidebar-active" id="overlay">
+
+        </label>
+    <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" 
+            width="32px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 
+            224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg> 
+    </div>
+        <a href="#" class="home-link">LOGO</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+        
+
+</nav>
+
+</body>
+</html>

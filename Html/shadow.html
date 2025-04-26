@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow1</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: #58f8a0;
+            margin: 50px auto; /* 위아래 50px, 양옆 할 수 있는 만큼 여백 */
+                   }
+        .box-shadow-text{
+                box-shadow: 5px 5px; /* x축이동 y축 이동*/
+                box-shadow: -5px -5px; /* x축이동  y축 이동*/
+                box-shadow: 5px -5px; /* x축이동  y축 이동*/
+                box-shadow: 5px 5px 10px;/* x이동, y이동, 흐림 강도(블러처리) */
+                box-shadow: 5px 5px 15px red; /* x이동, y이동, 흐림 강도 색상 적용*/
+                box-shadow: 5px 5px 5px 8px rgba(0,0,0,0.5);
+                /* x이동, y이동, 흐림 강도, 그림자크기 색상 적용*/
+                box-shadow: 0px 0px 15px 0px rgba(107, 106, 106, 0.5) inset; /* 그림자가 안쪽으로 하도록 하는 속성*/
+                
+        }
+      
+      
+      </style>
+</head>
+<body>
+    <div class="box box-shadow-text"></div>
+</body>
+</html>
